@@ -53,8 +53,8 @@ pipeline {
             steps {
                 script {
                     echo 'deploying docker image...'
-                    sh 'envsubst < kubernetes/deployment.yaml | kubectl apply -f -'
-                    sh 'envsubst < kubernetes/service.yaml | kubectl apply -f -'
+                    sh 'envsubst < kubernetes/deployment.yml | kubectl apply -f -'
+                    sh 'envsubst < kubernetes/service.yml | kubectl apply -f -'
                 }
             }
         }
