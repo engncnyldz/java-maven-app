@@ -1,0 +1,9 @@
+---
+plugin: aws_ec2
+regions: 
+  - eu-central-1
+keyed_groups:
+  - key: tags
+    prefix: tag
+filters:
+  tag:type: ansible-node
