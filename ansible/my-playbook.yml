@@ -5,8 +5,11 @@
   gather_facts: False
   tasks:
     - name: Install docker
+      vars:
+        ansible_python_interpreter: /usr/bin/python
       ansible.builtin.yum:
         name:
+          - python3
           - docker
         update_cache: yes
         state: present
